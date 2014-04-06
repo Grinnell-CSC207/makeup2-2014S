@@ -72,6 +72,10 @@ public class GoodFilteredIterator<T>
     // If we already have a next value, we're done.
     if (this.next != null)
       return;
+    // We're about to use the base iterator, which means that it is
+    // no longer to okay to call remove, since the base iterator has
+    // a different value than next returned.
+    this.okToRemove = false;
     // Find the next value that meets the predicate.
     while (this.base.hasNext())
       {
@@ -82,7 +86,6 @@ public class GoodFilteredIterator<T>
     // If we got this far, there is no next value.  Set the state
     // appropriately.
     this.next = null;
-    this.okToRemove = false;
   } // getNext()
 
   // +---------+---------------------------------------------------------
