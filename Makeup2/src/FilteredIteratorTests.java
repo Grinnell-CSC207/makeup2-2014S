@@ -143,7 +143,7 @@ public class FilteredIteratorTests
   public void testNext1()
   {
     fail("not yet implemented");
-  } // testInappropriateNull()
+  } // testNext1()
 
   /**
    * A test in which the `next` method of some poorly implemented filtered
