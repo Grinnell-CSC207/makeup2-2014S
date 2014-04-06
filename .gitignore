@@ -10,3 +10,15 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Sam's temp files
+*.swp
+
+# Eclipse's unneeded bin directory
+bin
+
+# Eclipse's unneeded .metadata
+.metadata
+
+# OS X's unneeded DS_Store
+.DS_Store
