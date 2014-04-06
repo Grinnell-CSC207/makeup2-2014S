@@ -139,6 +139,7 @@ public class FilteredIteratorTests
    * iterators returns null, rather than the appropriate element of the 
    * underlying iterator.
    */
+  @Test
   public void testNext1()
   {
     fail("not yet implemented");
@@ -149,6 +150,7 @@ public class FilteredIteratorTests
    * iterators returns the wrong value, and the problem is likely to be 
    * the implementation of `next`.
    */
+  @Test
   public void testNext2()
   {
     fail("not yet implemented");
@@ -159,6 +161,7 @@ public class FilteredIteratorTests
    * iterators returns the wrong value, and the problem is likely to be 
    * the implementation of `hasNext`.
    */
+  @Test
   public void testNext3()
   {
     fail("not yet implemented");
@@ -168,6 +171,7 @@ public class FilteredIteratorTests
    * A test in which the `remove` method of some poorly implemented filtered
    * iterators deletes the wrong values.
    */
+  @Test
   public void testRemove1()
   {
     fail("not yet implemented");
@@ -177,6 +181,7 @@ public class FilteredIteratorTests
    * A test in which the `hasNext` method of some poorly implemented filtered
    * iterators returns the wrong value (true instead of false, or vice versa).
    */
+  @Test
   public void testHasNext1()
   {
     fail("not yet implemented");
