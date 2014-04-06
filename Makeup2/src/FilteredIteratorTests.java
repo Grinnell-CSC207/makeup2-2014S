@@ -115,12 +115,22 @@ public class FilteredIteratorTests
     ArrayList<Integer> vals = new ArrayList<Integer>(Arrays.asList(arr));
     Iterator fit = this.factory.filter(vals.iterator(), I_ACCEPT);
 
-    // Go through the list and remove elements.
+    // Advance to the 2
     assertTrue(fit.hasNext());
     assertEquals(fit.next(), Integer.valueOf(1));
     assertTrue(fit.hasNext());
     assertEquals(fit.next(), Integer.valueOf(2));
-    fit.remove();
+
+    // Remove the 2.  We use a try/catch just in case.
+    try 
+      {
+        fit.remove();
+      } // try
+    catch (Exception e)
+      {
+      } // catch (Exception)
+
+    // Make sure that we still have the rest of the list.
     assertTrue(fit.hasNext());
     assertEquals(fit.next(), Integer.valueOf(3));
     assertFalse(fit.hasNext());
