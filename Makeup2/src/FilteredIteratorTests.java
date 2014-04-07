@@ -98,9 +98,9 @@ public class FilteredIteratorTests
 
     // Some "by hand" tests.
     assertTrue(fit.hasNext());
-    assertEquals(fit.next(), Integer.valueOf(0));
+    assertEquals(Integer.valueOf(0), fit.next());
     assertTrue(fit.hasNext());
-    assertEquals(fit.next(), Integer.valueOf(2));
+    assertEquals(Integer.valueOf(2), fit.next());
     assertFalse(fit.hasNext());
   } // sampleTest1()
 
@@ -117,9 +117,9 @@ public class FilteredIteratorTests
 
     // Advance to the 2
     assertTrue(fit.hasNext());
-    assertEquals(fit.next(), Integer.valueOf(1));
+    assertEquals(Integer.valueOf(1), fit.next());
     assertTrue(fit.hasNext());
-    assertEquals(fit.next(), Integer.valueOf(2));
+    assertEquals(Integer.valueOf(2), fit.next());
 
     // Remove the 2.  We use a try/catch just in case.
     try 
@@ -132,15 +132,15 @@ public class FilteredIteratorTests
 
     // Make sure that we still have the rest of the list.
     assertTrue(fit.hasNext());
-    assertEquals(fit.next(), Integer.valueOf(3));
+    assertEquals(Integer.valueOf(3), fit.next());
     assertFalse(fit.hasNext());
 
     // Look at the resulting list, which should be [1,3]
     fit = this.factory.filter(vals.iterator(), I_ACCEPT);
     assertTrue(fit.hasNext());
-    assertEquals(fit.next(), Integer.valueOf(1));
+    assertEquals(Integer.valueOf(1), fit.next());
     assertTrue(fit.hasNext());
-    assertEquals(fit.next(), Integer.valueOf(3));
+    assertEquals(Integer.valueOf(3), fit.next());
     assertFalse(fit.hasNext());
   } // sampleTest2()
 
